@@ -1,0 +1,7 @@
+sudo: false
+language: python
+install:
+- gcloud config set project python-collectable
+before_install:
+- openssl aes-256-cbc -K $encrypted_86a2f7783671_key -iv $encrypted_86a2f7783671_iv
+  -in client-secret.json.enc -out client-secret.json -d
