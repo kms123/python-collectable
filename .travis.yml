@@ -2,9 +2,9 @@ sudo: false
 language: python
 
 # Cache our Gcloud SDK between commands
-cache:
-  directories:
-  - "$HOME/google-cloud-sdk/"
+#cache:
+#  directories:
+#  - "$HOME/google-cloud-sdk/"
 
 env:
 # Make sure gcloud command is on our PATH and the App Engine SDK is in the Python path
@@ -18,7 +18,9 @@ before_install:
 - mkdir -p src/lib
 
 # If the SDK is not already cached, download it and unpack it
-- curl https://sdk.cloud.google.com | bash;
+- if [ ! -d ${HOME}/google-cloud-sdk ]; then
+     curl https://sdk.cloud.google.com | bash;
+  fi
 - gcloud auth activate-service-account --key-file client-secret.json
 
 install:
