@@ -25,7 +25,7 @@ before_install:
 
 install:
 - gcloud config set project python-collectable
-- cd src/angular-collectable && npm install && npm run build && cd ../../
+#- cd src/angular-collectable && npm install && npm run build && cd ../../
 - pip install -r requirements.txt -t src/lib/
 
 script:
