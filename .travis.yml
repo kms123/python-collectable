@@ -29,4 +29,4 @@ install:
 - pip install -r requirements.txt -t src/lib/
 
 script:
-- gcloud app deploy app.yaml
+- gcloud app deploy src/app.yaml
