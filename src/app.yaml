@@ -2,6 +2,9 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+skip_files:
+- ^angular-collectable\/(?!dist)
+
 handlers:
   - url: /((?:inline|main|polyfills|styles|vendor)\.bundle\.js)
     static_files: angular-collectable/dist/\1
