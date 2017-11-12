@@ -9,6 +9,9 @@ install:
 - cd src/angular-collectable && npm install && npm run build && cd ../../
 - pip install -r requirements.txt -t src/lib/
 
+script:
+- echo "No script to run."
+
 deploy:
   provider: gae
   skip_cleanup: true
