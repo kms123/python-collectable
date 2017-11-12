@@ -16,4 +16,5 @@ deploy:
   project: python-collectable
   config: src/app.yaml
   default: true
-  on: master
+  on:
+    branch: master
